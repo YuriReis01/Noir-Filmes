@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'catalogo/filmes.css' %}">
+    <title>Noir Filmmes</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Noir</a>
+
+        <div class="menu">
+            <a href="https://discord.gg/YgbqQfvWDJ" target="_blank" rel="noopener noreferrer">Discord</a>
+        </div>
+    </header>
+    <div class="sadacao">
+        <div class="teste">
+            <h1>Seja Bem Vindo</h1>
+        </div>
+        <div class="teste2">
+            <h2>ao Cinema Noir</h2>
+        </div>
+    </div>
+    
+    <div class="barra">
+        <h2 class="assistido">Filmes Assistidos</h2>
+        <a class="novo" href="{% url 'adicionar_filme' %}">Adicionar novo filme</a>
+    </div>
+<div class="filmes">
+    {% for filme in filmes %}
+    <div class="cartaz">
+        {% if filme.poster_url %}
+            <img src="{{ filme.poster_url }}" alt="{{ filme.titulo }}">
+        {% endif %}
+        <h3>{{ filme.titulo }}</h3>
+        <p>{{ filme.genero }}</p>
+        <p>Mês: {{ filme.mes_assistido }}</p>
+        <a  class="edit" href="{% url 'editar_filme' filme.id %}">Editar</a>
+        <a  class="edit" href="{% url 'excluir_filme' filme.id %}">Excluir</a>
+    </div>
+    {% endfor %}
+</div>
+</body>
+
+</html>

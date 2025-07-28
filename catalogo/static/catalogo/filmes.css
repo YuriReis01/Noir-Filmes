@@ -1,0 +1,181 @@
+@font-face {
+    font-family: 'Cinema';
+    src: url(UndevelopedBook.ttf) format('TrueType');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Newsreader", serif;
+    box-sizing: border-box;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    background-color: #222;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    border-radius: 0 0 10px 10px;
+}
+
+.logo{
+    font-size: 32px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.menu a{
+    font-size: 18px;
+    font-weight: 500;
+    color: aliceblue;
+    text-decoration: none;
+    margin-left: 40px;
+    position: relative;
+}
+
+.menu a::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: aliceblue;
+    transition: .3s;
+}
+
+.menu a:hover::before{
+    width: 100%;
+}
+
+.sadacao{
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.teste{
+    background-color: #fff;
+    height: 44px;
+}
+
+.teste2{
+    background-color: #fff;
+    height: 24px;
+}
+
+.sadacao h1{
+    font-family: "Cinema";
+    text-align: center;
+    font-size: 70px;
+    color: #222;
+    font-weight: 500;
+}
+
+.sadacao h2{
+    font-family: "Cinema";
+    text-align: center;
+    font-size: 40px;
+    color: #222;
+    font-weight: 500;
+    margin-bottom: 35px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: url(popcorn-juice-movie-night.jpg) no-repeat;
+    background-size: cover;
+    color: #fff;
+    padding: 20px;
+    margin: 0;
+}
+
+.barra{
+    display: flex;
+    text-decoration: none;
+    font-size: 18px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #222;
+    margin: 0;
+    padding: 5px;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+ .barra .novo{
+    font-size: 18px;
+    text-decoration: none;
+    color: #222;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: azure;
+}
+
+.assistido{
+     font-size: 18px;
+    text-decoration: none;
+    color: #222;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: azure;
+}
+
+.edit{
+     font-size: 11px;
+    text-decoration: none;
+    color: #222;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: azure;
+}
+
+.filmes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* espaçamento entre os cards */
+}
+
+.cartaz {
+    background: #333;
+    border-radius: 8px;
+    padding: 10px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s;
+}
+
+.cartaz:hover {
+    transform: scale(1.05);
+}
+
+.cartaz img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.cartaz h3 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+}
+
+.cartaz p {
+    margin: 2px 0;
+    font-size: 14px;
+    color: #ccc;
+}
+

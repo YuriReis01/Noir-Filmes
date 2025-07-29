@@ -1,1 +1,1 @@
-web: gunicorn filmes_discord.wsgi
+web: gunicorn filmes_discord.wsgi --log-file -
